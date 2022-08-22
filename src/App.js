@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
     useEffect(() => {
-        fetch('http://localhost:6000/api/post/630204f2b590c05b19465c5a', { mode: 'no-cors'})
+        fetch('api/post')
             .then(res => res.json)
             .then(data => console.log(data))
             .catch(e => console.log(e));
