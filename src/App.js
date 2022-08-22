@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
     useEffect(() => {
-        fetch('api/post')
+        fetch('http:/localhost:6000/api/post')
             .then(res => res.json)
             .then(data => console.log(data))
             .catch(e => console.log(e));
