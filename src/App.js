@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+import {useEffect} from 'react';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        fetch('http://localhost:6000/api/post/630204f2b590c05b19465c5a', { mode: 'no-cors'})
+            .then(res => res.json)
+            .then(data => console.log(data))
+            .catch(e => console.log(e));
+    }, []);
+    return(
+        <div className="App">
+               some text 
+        </div>
+    );
 }
 
 export default App;
